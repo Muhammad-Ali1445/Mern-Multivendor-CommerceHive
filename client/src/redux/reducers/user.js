@@ -9,7 +9,7 @@ export const userReducer = createReducer(initialState, (builder) => {
         .addCase('LoadUserRequest', (state) => {
             state.loading = true;
         })
-        .addCase('LoadUerSuccess', (state, action) => {
+        .addCase('LoadUserSuccess', (state, action) => {
             state.loading = false;
             state.isAuthenticatedUser = true;
             state.user = action.payload;

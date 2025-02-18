@@ -24,13 +24,13 @@ const Header = ({ activeHeading }) => {
   const [dropDown, setDropDown] = useState(false);
 
   console.log("Backend URL:", backend_url);
-  // console.log("Avatar URL:", user.avatar.url);
-  // console.log(
-  //   "Full Image URL:",
-  //   `${backend_url}${encodeURIComponent(user.avatar.url)}`
-  // );
+  console.log("Avatar URL:", user?.avatar.url);
+  console.log(
+    "Full Image URL:",
+    `${backend_url}${encodeURIComponent(user?.avatar.url)}`
+  );
 
-  const handleSearchChange = (e) => {                 
+  const handleSearchChange = (e) => {
     const term = e.target.value;
     setSearchTerm(term);
 
@@ -178,7 +178,7 @@ const Header = ({ activeHeading }) => {
                     <img
                       src={`${backend_url}${user.avatar?.url}`}
                       alt=""
-                      className="w-[35px] h-[35px] rounded-full"
+                      className="w-[60px] h-[60px] rounded-full border-[3px] border-[#5976c4] object-contain"
                     />
                   </Link>
                 ) : (
