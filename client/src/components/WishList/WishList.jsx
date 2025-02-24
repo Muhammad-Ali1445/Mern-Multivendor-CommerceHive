@@ -1,10 +1,7 @@
 import React, { useState } from "react";
 import { RxCross1 } from "react-icons/rx";
 import styles from "../../styles/styles";
-import { IoBagHandleOutline } from "react-icons/io5";
-import { HiOutlineMinus, HiPlus } from "react-icons/hi";
 import { BsCartPlus } from "react-icons/bs";
-import { Link } from "react-router-dom";
 import { AiOutlineHeart } from "react-icons/ai";
 
 const WishList = ({ setOpenWishList }) => {
@@ -59,7 +56,7 @@ const WishList = ({ setOpenWishList }) => {
 };
 
 const CartSingle = ({ cartProduct }) => {
-  const [value, setValue] = useState(1);
+  const [value] = useState(1);
   const totalPrice = cartProduct.price * value;
   return (
     <div className="border-b p-4 ">
